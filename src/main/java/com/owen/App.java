@@ -16,6 +16,8 @@ public class App
     {
         System.out.println( "Hello World!" );
         Combination.permute("","ABC");
+        System.out.println("-------------");
+        Combination.subset("", "ABC");
         List<Integer> list=new ArrayList<Integer>();
         List<ArrayList<Integer>> result=new ArrayList<ArrayList<Integer>>();
         List<Integer> soFar=new ArrayList<Integer>();
@@ -23,7 +25,8 @@ public class App
         list.add(2);
         list.add(3);
         //list.add(4);
-        Combination.permute(soFar, list, result);
+        //Combination.permute(soFar, list, result);
+        Combination.subset(soFar, list, result,2);
         for(ArrayList<Integer> ele:result){
         	System.out.println(ele);
         }
