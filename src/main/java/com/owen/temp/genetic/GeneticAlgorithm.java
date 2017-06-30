@@ -24,16 +24,16 @@ public class GeneticAlgorithm {
 
     private int pointNum;
     private int[][] population; // 种群集
-    private float[][] dist; // 点集间的邻接矩阵
+    private double[][] dist; // 点集间的邻接矩阵
 
     private int[] bestIndivial; // 最短的结果集
-    private float bestDist; // 最短的距离
+    private double bestDist; // 最短的距离
     private int currentBestPosition; // 当前最好个体的位置
-    private float currentBestDist; // 当前最好个体的距离
+    private double currentBestDist; // 当前最好个体的距离
 
-    private float[] values; // 种群中每个个体的dist
-    private float[] fitnessValues; // 适应度集
-    private float[] roulette;
+    private double[] values; // 种群中每个个体的dist
+    private double[] fitnessValues; // 适应度集
+    private double[] roulette;
 
     private boolean isAutoNextGeneration = false;
 
@@ -51,7 +51,7 @@ public class GeneticAlgorithm {
      * @param matrix
      * @return
      */
-    public int[] tsp(float[][] matrix) {
+    public int[] tsp(double[][] matrix) {
         this.dist = matrix;
         pointNum = matrix.length;
         init();
@@ -77,9 +77,9 @@ public class GeneticAlgorithm {
         currentBestPosition = 0;
         currentBestDist = 0;
 
-        values = new float[populationSize];
-        fitnessValues = new float[populationSize];
-        roulette = new float[populationSize];
+        values = new double[populationSize];
+        fitnessValues = new double[populationSize];
+        roulette = new double[populationSize];
         population = new int[populationSize][pointNum];
 
         //initDist(points);
@@ -137,7 +137,7 @@ public class GeneticAlgorithm {
         }
 
         //set the roulette
-        float sum = 0;
+        double sum = 0;
         for (int i = 0; i < fitnessValues.length; i++) {
             sum += fitnessValues[i];
         }
@@ -321,8 +321,8 @@ public class GeneticAlgorithm {
      *
      * @return
      */
-    private float calculateIndivialDist(int[] indivial) {
-        float sum = dist[indivial[0]][indivial[indivial.length - 1]];
+    private double calculateIndivialDist(int[] indivial) {
+        double sum = dist[indivial[0]][indivial[indivial.length - 1]];
         for (int i = 1; i < indivial.length; i++) {
             sum += dist[indivial[i]][indivial[i - 1]];
         }
@@ -418,7 +418,7 @@ public class GeneticAlgorithm {
 //        return bestIndivial;
     }
 
-    public float getBestDist() {
+    public double getBestDist() {
         return bestDist;
     }
 

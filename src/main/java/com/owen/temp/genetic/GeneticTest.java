@@ -50,8 +50,8 @@ public class GeneticTest {
         System.out.println();
     }
 
-    private static float[][] getDist(Point[] points) {
-        float[][] dist = new float[points.length][points.length];
+    private static double[][] getDist(Point[] points) {
+        double[][] dist = new double[points.length][points.length];
         for (int i = 0; i < points.length; i++) {
             for (int j = 0; j < points.length; j++) {
                 dist[i][j] = distance(points[i], points[j]);
@@ -60,8 +60,8 @@ public class GeneticTest {
         return dist;
     }
 
-    private static float distance(Point p1, Point p2) {
-        return (float) Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
+    private static double distance(Point p1, Point p2) {
+        return  Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
     }
     
 }

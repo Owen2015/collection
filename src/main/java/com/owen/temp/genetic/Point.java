@@ -8,8 +8,8 @@ package com.owen.temp.genetic;
  */
 
 public class Point {
-    public float x;
-    public float y;
+    public double x;
+    public double y;
 
     @Override
     public String toString() {
