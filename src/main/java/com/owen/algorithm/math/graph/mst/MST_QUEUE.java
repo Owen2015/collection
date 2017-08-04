@@ -9,8 +9,10 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 
-import com.sinbad.ai2.graph.Vertex;
-import com.sinbad.ai2.graph.WeightedGraph;
+import com.owen.datastructure.graph.Vertex;
+import com.owen.datastructure.graph.WeightedGraph;
+
+
 
 public class MST_QUEUE {
 

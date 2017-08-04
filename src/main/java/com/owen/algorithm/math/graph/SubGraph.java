@@ -4,9 +4,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import com.sinbad.ai2.graph.Edge;
-import com.sinbad.ai2.graph.Vertex;
-import com.sinbad.ai2.graph.WeightedGraph;
+import com.owen.datastructure.graph.Edge;
+import com.owen.datastructure.graph.Vertex;
+import com.owen.datastructure.graph.WeightedGraph;
+
 
 public class SubGraph {
 
