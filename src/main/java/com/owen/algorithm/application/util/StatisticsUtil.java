@@ -1,4 +1,4 @@
-package com.owen.utils;
+package com.owen.algorithm.application.util;
 
 import org.apache.commons.math3.stat.StatUtils;
 

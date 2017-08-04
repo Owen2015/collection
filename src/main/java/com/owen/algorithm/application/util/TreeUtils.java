@@ -1,4 +1,4 @@
-package com.owen.utils;
+package com.owen.algorithm.application.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import java.util.Map.Entry;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-import com.sinbad.ai2.bean.Spot;
-import com.sinbad.ai2.graph.algorithm.mst.Node;
+import com.owen.algorithm.math.graph.mst.Node;
+
 
 public class TreeUtils {
 

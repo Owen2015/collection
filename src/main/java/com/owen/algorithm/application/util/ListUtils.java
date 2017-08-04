@@ -1,4 +1,4 @@
-package com.owen.utils;
+package com.owen.algorithm.application.util;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,7 +7,17 @@ import java.util.Set;
 
 public class ListUtils {
 
-	static public <T extends Comparable<? super T>> int getMaxIndex(List<T> list){
+	
+	public static <T> int getIndex(List<T> list,T ele){
+		for(int i=0;i<list.size();i++){
+			if(list.get(i).equals(ele)){
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public static <T extends Comparable<? super T>> int getMaxIndex(List<T> list){
 		T max;
 		int index=0;
 		max=list.get(0);
@@ -20,7 +30,7 @@ public class ListUtils {
 		return index;
 	}
 	
-	static public <T extends Comparable<? super T>> int getMinIndex(List<T> list){
+	public static <T extends Comparable<? super T>> int getMinIndex(List<T> list){
 		T min;
 		int index=0;
 		min=list.get(0);
@@ -61,6 +71,13 @@ public class ListUtils {
 		}
 		return result;
 	}
+
+	public static <T> void  swap(List<T> list,int i,int j){
+		T tmp=list.get(i);
+		list.set(i, list.get(j));
+		list.set(j,tmp);
+	}
+	
 	public static void main(String[] args){
 		List<Double> testd=new ArrayList<Double>();
 		List<Integer> testi=new ArrayList<Integer>();
